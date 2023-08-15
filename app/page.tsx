@@ -1,9 +1,8 @@
-import { Courses } from "./components/Courses";
 
 export default function Home() {
   return (
     <>
-      <Courses />
+      <h1>Hello world</h1>
     </>
   );
 }
