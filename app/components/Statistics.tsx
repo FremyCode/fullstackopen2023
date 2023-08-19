@@ -56,8 +56,6 @@ export const Statistics = ({ feedbackStats }: FeedbackProps) => {
                 <td>{feedback.value}</td>
               </tr>
             ))}
-          </table>
-          <table>
             <tr>
               <th className=" w-32">All</th>
               <td>{feedbackTotal()}</td>
