@@ -46,18 +46,31 @@ export const Statistics = ({ feedbackStats }: FeedbackProps) => {
   }
   return (
     <div className="text-left">
-      <h2 className="text-xl font-bold ">Statistics</h2>
+      <h2 className="text-xl font-bold py-2 ">Statistics</h2>
       {feedbackTotal() > 0 ? (
-        <div className="">
-          {feedbackStats.map((feedback, index) => (
-            <p key={index}>
-              {feedback.label} {feedback.value}
-            </p>
-          ))}
-          <p>All</p>
-          <div>{feedbackTotal()}</div>
-          <p>Average {feedbackAverage()}</p>
-          <p>Positive {positiveFeedbacks()}</p>
+        <div>
+          <table>
+            {feedbackStats.map((feedback, index) => (
+              <tr key={index}>
+                <th className=" w-32">{feedback.label}</th>
+                <td>{feedback.value}</td>
+              </tr>
+            ))}
+          </table>
+          <table>
+            <tr>
+              <th className=" w-32">All</th>
+              <td>{feedbackTotal()}</td>
+            </tr>
+            <tr>
+              <th className=" w-32">Average</th>
+              <td>{feedbackAverage()}</td>
+            </tr>
+            <tr>
+              <th className=" w-32">Positive</th>
+              <td>{positiveFeedbacks()}</td>
+            </tr>
+          </table>
         </div>
       ) : (
         <p>No feedback given</p>
