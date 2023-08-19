@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FeedbackButton } from "./buttons/FeedbackButton";
 import { Statistics } from "./Statistics";
 
-export default function Unicafe() {
+export const Unicafe = () => {
   const [feedbackStats, setFeedbackStats] = useState([
     { label: "Good", value: 0 },
     { label: "Neutral", value: 0 },
@@ -26,7 +26,7 @@ export default function Unicafe() {
 
   return (
     <div className="mx-5">
-      <h1 className="text-xl font-bold py-5">Give feedback</h1>
+      <h1 className="py-5">Give feedback</h1>
       <div className="pb-5">
         <FeedbackButton label="Good" onClick={handleClick} />
         <FeedbackButton label="Neutral" onClick={handleClick} />
