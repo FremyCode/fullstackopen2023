@@ -52,20 +52,20 @@ export const Statistics = ({ feedbackStats }: FeedbackProps) => {
           <table>
             {feedbackStats.map((feedback, index) => (
               <tr key={index}>
-                <th className=" w-32">{feedback.label}</th>
+                <th className="w-32">{feedback.label}</th>
                 <td>{feedback.value}</td>
               </tr>
             ))}
             <tr>
-              <th className=" w-32">All</th>
+              <th className="w-32">All</th>
               <td>{feedbackTotal()}</td>
             </tr>
             <tr>
-              <th className=" w-32">Average</th>
+              <th className="w-32">Average</th>
               <td>{feedbackAverage()}</td>
             </tr>
             <tr>
-              <th className=" w-32">Positive</th>
+              <th className="w-32">Positive</th>
               <td>{positiveFeedbacks()}</td>
             </tr>
           </table>
