@@ -5,18 +5,55 @@ import { CourseHeader } from "./CourseHeader";
 import { TotalExercises } from "./TotalExercises";
 
 export const Courses = () => {
-  const course = "Half Stack application development";
   const courseContent = [
-    { part: "Fundamentals of React", exercises: 10 },
-    { part: "Using props to pass data", exercises: 7 },
-    { part: "State of a component", exercises: 14 },
+    {
+      name: "Half Stack application development",
+      id: 1,
+      parts: [
+        {
+          name: "Fundamentals of React",
+          exercises: 10,
+          id: 1,
+        },
+        {
+          name: "Using props to pass data",
+          exercises: 7,
+          id: 2,
+        },
+        {
+          name: "State of a component",
+          exercises: 14,
+          id: 3,
+        },
+        {
+          name: "Redux",
+          exercises: 11,
+          id: 4,
+        },
+      ],
+    },
+    {
+      name: "Node.js",
+      id: 2,
+      parts: [
+        {
+          name: "Routing",
+          exercises: 3,
+          id: 1,
+        },
+        {
+          name: "Middlewares",
+          exercises: 7,
+          id: 2,
+        },
+      ],
+    },
   ];
 
   return (
     <div>
-      <CourseHeader course={course} />
       <CourseContent content={courseContent} />
-      <TotalExercises content={courseContent} />
+      {/* <TotalExercises parts={courseContent} /> */}
     </div>
   );
 };

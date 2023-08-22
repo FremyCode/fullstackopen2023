@@ -1,8 +1,11 @@
 export type CourseContentProps = {
-  content: CourseContentItem[];
+  name: string;
+  id: number;
+  parts: CourseContentItem[];
 };
 
 export type CourseContentItem = {
-  part: string;
+  id: number;
+  name: string;
   exercises: number;
-};
+}
