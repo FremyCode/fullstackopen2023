@@ -1,3 +1,7 @@
+export type CoursesProps = {
+  content: Course[];
+}
+
 export type Course = {
   name: string;
   id: number;

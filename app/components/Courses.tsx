@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { CourseContent } from "./CourseContent";
-import { CourseHeader } from "./CourseHeader";
 import { TotalExercises } from "./TotalExercises";
 
 export const Courses = () => {
@@ -53,7 +52,7 @@ export const Courses = () => {
   return (
     <div>
       <CourseContent content={courseContent} />
-      {/* <TotalExercises parts={courseContent} /> */}
+      <TotalExercises content={courseContent} />
     </div>
   );
 };
