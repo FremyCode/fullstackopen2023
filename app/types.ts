@@ -1,11 +1,11 @@
-export type CourseContentProps = {
+export type Course = {
   name: string;
   id: number;
-  parts: CourseContentItem[];
+  parts: Part[];
 };
 
-export type CourseContentItem = {
-  id: number;
+export type Part = {
   name: string;
   exercises: number;
-}
+  id: number;
+};
